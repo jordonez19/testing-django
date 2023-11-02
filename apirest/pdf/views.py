@@ -1,7 +1,12 @@
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 import pdfkit
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+import os
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+from django.views.generic import ListView
+from .models import Customer
 
 # Configurar pdfkit para usar wkhtmltopdf
 pdfkit_config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
@@ -11,34 +16,21 @@ def create_pdf(request):
     context = {}  # Reemplaza {} con los datos
     rendered_html = render_to_string('base.html', context)
 
-    # Pasar el archivo CSS al PDF
-    """     options = {
-        'page-size': 'A5',
-        'margin-top': '0mm',
-        'margin-right': '0mm',
-        'margin-bottom': '0mm',
-        'margin-left': '0mm',
-        'encoding': "UTF-8",
-        'no-outline': None,
-        'disable-smart-shrinking': None,
-        'quiet': ''
-    } """
     options = {
         'dpi': '300',
         'page-size': 'A4',
         'encoding': "UTF-8",
-        'margin-top': '0in',
-        'margin-right': '0in',
-        'margin-bottom': '0in',
-        'margin-left': '0in',
-        'enable-internal-links': '',
+        'margin-top': '0.1in',
+        'margin-right': '0.1in',
+        'margin-bottom': '0.1in',
+        'margin-left': '0.1in',
+        'enable-internal-links': '',    
         #'footer-center': '[page] of [topage]',
         #'header-html': _path + '/web/templates/web/pdf/header.html',
-        #'footer-html': _path + '/web/templates/web/pdf/footer.html',
         'page-offset': '-1',
         #'dump-outline': _path + '/web/templates/web/pdf/outline.xslt'
         'header-spacing': '4',
-        'footer-spacing': '5'
+        'footer-spacing': '2'
     }
 
 
@@ -59,3 +51,54 @@ def create_pdf(request):
 def image(request):
     return render(request, 'report-pdf.html')
     
+#----------------------------------------------------------------------------
+class CustomerListView(ListView):
+    model = Customer
+    template_name = 'main.html'
+
+def customer_render_pdf_view(request, *args, **kwargs):
+
+    PK = kwargs.get('pk')
+    customer = get_object_or_404(Customer, pk=PK)
+
+    template_path = 'pdf2.html'
+    context = {'customer': customer}
+    # Create a Django response object, and specify content_type as pdf
+    response = HttpResponse(content_type='application/pdf')
+    #if download:
+    #response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    #if display:
+    response['Content-Disposition'] = 'filename="report.pdf"'
+    # find the template and render it.
+    template = get_template(template_path)
+    html = template.render(context)
+
+    # create a pdf
+    pisa_status = pisa.CreatePDF(
+       html, dest=response)
+    # if error then show some funny view
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    return response
+
+def render_pdf_view(request):
+    template_path = 'pdf1.html'
+    context = {'myvar': 'this is your template context'}
+    # Create a Django response object, and specify content_type as pdf
+    response = HttpResponse(content_type='application/pdf')
+    #if download:
+    #response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    #if display:
+    response['Content-Disposition'] = 'filename="report.pdf"'
+    # find the template and render it.
+    template = get_template(template_path)
+    html = template.render(context)
+
+    # create a pdf
+    pisa_status = pisa.CreatePDF(
+       html, dest=response)
+    # if error then show some funny view
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    return response
+#----------------------------------------------------------------------------

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte cotizacion</title>
+</head>
+
+<style>
+    @page {
+        size: letter landscape;
+        margin: 2cm;
+    }
+
+    .main {
+        background-color: rgb(212, 232, 255);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+    }
+
+    .imagen {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="content">
+
+            <h1>{{customer}}</h1>
+            <P> {{customer.description | linebreaks}} </P>
+            {{customer.logo}}
+            <br>
+            {{customer.logo.url}}
+            <br>
+            {{customer.logo.path}}
+            <br>
+        </div>
+
+        <img class="imagen" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="">
+    </div>
+</body>
+</html>
