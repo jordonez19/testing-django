@@ -20,10 +20,10 @@ def create_pdf(request):
         'dpi': '300',
         'page-size': 'A4',
         'encoding': "UTF-8",
-        'margin-top': '0.1in',
-        'margin-right': '0.1in',
-        'margin-bottom': '0.1in',
-        'margin-left': '0.1in',
+        'margin-top': '0in',
+        'margin-right': '0in',
+        'margin-bottom': '0in',
+        'margin-left': '0in',
         'enable-internal-links': '',    
         #'footer-center': '[page] of [topage]',
         #'header-html': _path + '/web/templates/web/pdf/header.html',
@@ -32,10 +32,6 @@ def create_pdf(request):
         'header-spacing': '4',
         'footer-spacing': '2'
     }
-
-
-
-
 
     css_file = 'static/styles/style.css'
     options['user-style-sheet'] = css_file
@@ -51,6 +47,9 @@ def create_pdf(request):
 def image(request):
     return render(request, 'report-pdf.html')
     
+#----------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 class CustomerListView(ListView):
     model = Customer

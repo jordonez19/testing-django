@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporte PDF</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            background: #fff;
+            color: black;
+            font-size: 100%;
+            font-weight: 500;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        .content {
+            position: absolute;
+            top: 22%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            height: 90%;
+        }
+
+        .datecontent {
+            position: absolute;
+            top: 10%;
+            right: 23%;
+            width: 34%;
+        }
+
+        .img-membrete {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            border: 1px solid #000;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            background-color: #ff5912;
+            text-transform: uppercase;
+        }
+
+        td {
+            border: 1px solid #000;
+            color: #000;
+            padding: 0 5px;
+            text-align: start;
+            background-color: #fff;
+        }
+
+        li,
+        p {
+            margin: 2px 0;
+            text-align: start;
+        }
+
+        /* globals */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .bgprimary {
+            background-color: #ff5912;
+            color: #fff;
+        }
+
+        .bgsecondary {
+            background-color: #636363;
+            color: #fff;
+        }
+
+        .bgwhite {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .border-light {
+            border: 1px solid rgb(219, 218, 218);
+        }
+
+        .border-dark {
+            border: 1px solid #000;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .total-grid {
+            width: 100%;
+            margin: 0;
+        }
+
+        .total-grid td {
+            min-width: 150px;
+        }
+
+        .td__none {
+            border: none;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        b {
+            font-weight: 900 !important;
+        }
+
+        .mt-5 {
+            margin-top: 55px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <center>
+            <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+            <div class="datecontent fw-bold">
+                <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+                <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+                <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+            </div>
+            <div class="content">
+                <h3 class="text-start fw-bold">La transcripción que se lista en la propuesta se hará basada
+                    en los
+                    siguientes parámetros:</h3>
+
+                <ol>
+                    <li><b>t.Express</b>: Tiempo de entrega de cinco días hábiles por las primeras dos horas
+                        de audio, más
+                        doce horas
+                        por
+                        cada hora de audio adicional.</li>
+                    <li><b>T.Natural:</b> Se realiza un documento donde se omiten las muletillas e
+                        intervenciones de forma.
+                        Ideal para
+                        tener un documento bien redactado con los aportes importantes de la reunión.</li>
+                    <li>Los días hábiles son de lunes a viernes.</li>
+                    <li>La hora de audio cuenta una vez transcurridos quince minutos del audio o video.</li>
+                </ol>
+
+                <h3 class="text-start fw-bold">Tipo de transcripciones</h3>
+                <p>
+                    A continuación, encontrará la clasificación de nuestro servicio de transcripciones.
+                    Puede elegir
+                    cualquier
+                    combinación
+                    entre el tiempo de entrega y el tipo de redacción de la transcripción que necesita.
+                </p>
+
+                <h3 class="text-start fw-bold">Por tiempo:</h3>
+
+                <ol>
+                    <li><b>Normal</b>: Tiempo de entrega de ocho días hábiles por las primeras dos horas de
+                        audio, más doce
+                        horas por
+                        cada hora de audio adicional.</li>
+                    <li><b>Express</b>: Tiempo de entrega de cinco días hábiles por las primeras dos horas
+                        de audio, más
+                        doce horas por
+                        cada hora de audio adicional.</li>
+                    <li><b>Urgente</b>: Tiempo de entrega de tres días hábiles por las primeras dos horas de
+                        audio, más seis
+                        horas por
+                        cada hora de audio adicional.</li>
+                </ol>
+
+                <h3 class="text-start fw-bold">Por tipo de redacción de la transcripción:</h3>
+
+                <ol>
+                    <li><b>Natural</b>: Se realiza un documento donde se omiten las muletillas e
+                        intervenciones de forma.
+                        Ideal para
+                        tener un documento bien redactado con aportes importantes de la reunión.</li>
+                    <li><b>Literal</b>: Se realiza una transcripción con todas y cada una de las
+                        intervenciones que se
+                        realizan en el
+                        audio o video. No se omiten las muletillas ni cambian las palabras utilizadas por
+                        las personas que
+                        intervienen.
+                        Ideal para transcripciones de procesos judiciales.</li>
+                    <li><b>Cronometrada</b>: Se realiza una transcripción identificando el tiempo donde se
+                        realiza la
+                        intervención, sin
+                        omitir ninguna intervención.</li>
+                </ol>
+
+                <h3 class="text-start fw-bold">Conexión a internet y asambleas semipresenciales o mixtas:
+                </h3>
+
+                <p>La calidad y continuidad de la conectividad e internet del contratante serán su
+                    responsabilidad. En caso
+                    de contratar
+                    equipos para realización de asamblea mixta (presencia y virtual simultáneamente) se
+                    deben garantizar el
+                    espacio
+                    físico adecuado y la conectividad a internet durante el tiempo que dure la asamblea, de
+                    igual manera
+                    deberá cumplir
+                    con todos los protocolos de bioseguridad por el estado.</p>
+
+            </div>
+        </center>
+
+    </main>
+
+</body>
+
+</html>
