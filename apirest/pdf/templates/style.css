@@ -1,0 +1,154 @@
+        :root {
+            --primary: #ff5912;
+            --secondary: #636363;
+            --white: #ffffff;
+            --black: #000;
+            --cyan: #14c3bf;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            background-color: red;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        @page {
+            size: "A4";
+            margin: 1.0cm 1.5cm 3.5cm 1.5cm;
+        }
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            background: #fff;
+            color: black;
+            font-size: 70%;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            font-weight: 600;
+        }
+
+        .container {
+            position: relative;
+            width: 60%;
+            height: auto;
+            margin: auto;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -43%);
+            text-align: center;
+            width: 90%;
+        }
+
+        .datecontent {
+            position: absolute;
+            top: 10%;
+            right: 23%;
+            width: 34%;
+        }
+
+        .img-membrete {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            border: 1px solid var(--black);
+            color: var(--white);
+            padding: 5px;
+            text-align: center;
+            background-color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        td {
+            border: 1px solid var(--black);
+            color: var(--black);
+            padding: 0 5px;
+            text-align: start;
+            background-color: var(--white);
+        }
+
+        li,
+        p {
+            margin: 2px 0;
+            text-align: start;
+        }
+
+        /* globals */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .bgprimary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .bgsecondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .bgwhite {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        .border-light {
+            border: 1px solid rgb(219, 218, 218);
+        }
+
+        .border-dark {
+            border: 1px solid var(--black);
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .total-grid {
+            width: 100%;
+            margin: 0;
+        }
+
+        .total-grid td {
+            min-width: 150px;
+        }
+
+        .td__none {
+            border: none;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        b {
+            font-weight: 900 !important;
+        }
+
+        .mt-5 {
+            margin-top: 55px;
+        }

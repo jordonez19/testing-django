@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporte PDF</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            width: 100% !important;
+            height: 100%;
+            background: #fff;
+            color: black;
+            font-size: 70%;
+            font-weight: 600;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        .content {
+            position: absolute;
+            top: 22%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+        }
+
+        .datecontent {
+            position: absolute;
+            top: 10%;
+            right: 23%;
+            width: 34%;
+        }
+
+        .img-membrete {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            border: 1px solid #000;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            background-color: #ff5912;
+            text-transform: uppercase;
+        }
+
+        td {
+            border: 1px solid #000;
+            color: #000;
+            padding: 0 5px;
+            text-align: start;
+            background-color: #fff;
+        }
+
+        li,
+        p {
+            margin: 2px 0;
+            text-align: start;
+        }
+
+        /* globals */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .bgprimary {
+            background-color: #ff5912;
+            color: #fff;
+        }
+
+        .bgsecondary {
+            background-color: #636363;
+            color: #fff;
+        }
+
+        .bgwhite {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .border-light {
+            border: 1px solid rgb(219, 218, 218);
+        }
+
+        .border-dark {
+            border: 1px solid #000;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .total-grid {
+            width: 100%;
+            margin: 0;
+        }
+
+        .total-grid td {
+            min-width: 150px;
+        }
+
+        .td__none {
+            border: none;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        b {
+            font-weight: 900 !important;
+        }
+
+        .mt-5 {
+            margin-top: 55px;
+        }
+    </style>
+</head>
+
+<body>
+<main class="container">
+    <center>
+
+        <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+        <div class="datecontent">
+            <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+            <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+            <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+        </div>
+        <div class="content">
+            <table>
+                <tr>
+                    <th class="text-center">Equipos o servicios</th>
+                    <th>4 Horas</th>
+                    <th>Hora Adicional</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                            <li>Lorem ipsum dolor sit adipisicing elit. Dolor, sapiente.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            <li>Lorem ipsum amet consectetur ipsum amet consectetur adipisicing elit. Dolor,
+                                sapiente.
+                                (var code)
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="text-center">$14.300</td>
+                    <td class="text-center">10%</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                        </ul>
+                    </td>
+                    <td>$390.000</td>
+                    <td>$390.000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                        </ul>
+                    </td>
+                    <td>$390.000</td>
+                    <td>$390.000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                        </ul>
+                    </td>
+                    <td>$390.000</td>
+                    <td>$390.000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                        </ul>
+                    </td>
+                    <td>$390.000</td>
+                    <td>$390.000</td>
+                </tr>
+            </table>
+            <br>
+            <table class="total-grid">
+                <tr>
+                    <td class="td__none"></td>
+                    <td class="bgprimary border-light text-end fw-bold">SUBTOTAL</td>
+                    <td class="td__none bgsecondary text-center fw-bold">$500.000</td>
+                </tr>
+                <tr>
+                    <td class="td__none"></td>
+                    <td class="bgprimary border-light text-end fw-bold">DESCUENTO ESPECIAL</td>
+                    <td class="td__none bgsecondary text-center fw-bold">$500.000</td>
+                </tr>
+                <tr>
+                    <td class="td__none"></td>
+                    <td class="bgprimary border-light text-end fw-bold">TOTAL</td>
+                    <td class="td__none bgsecondary text-center fw-bold">$1.000.000</td>
+                </tr>
+            </table><br><br>
+            <ul>
+                <li>Puede elegir uno o más servicios de la tabla; los servicios o equipos se encuentran
+                    discriminados en
+                    ítems separados.</li>
+                <li>Si usted está interesado(a) en reducir los tiempos de entrega y/o cambiar el tipo de redacción
+                    de la
+                    transcripción, comuníquese con uno de nuestros asesores para actualizar su propuesta.</li>
+                <li>Observación de servicios: si contrata servicios como transcripción u operador de apoyo en
+                    comunicación, se aplica el IVA del 19% por no estar contemplado como servicio CLOUD. Este
+                    servicio
+                    se incluirá con dicho impuesto dentro de la facturación.</li>
+            </ul>
+            <p>
+                <b>Forma de pago</b>: cincuenta por ciento (50%) a la firma del contrato o correo electrónico de
+                confirmación de evento, cincuenta por ciento (50%) a la entrega de la factura con la discriminación
+                del
+                pago correspondiente.
+            </p>
+            <table>
+                <table>
+                    <tr>
+                        <th class="text-center">Servicios Adicionales</th>
+                        <th style="border-right:transparent"></th>
+                        <th style="border-left:transparent">Hora Adicional</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                </table>
+
+                <li>El servicio de pre-asamblea virtual no incluye servicios físicos ni transcripción, solo es un
+                    servicio en la nube exento
+                    de IVA.
+                </li>
+        </div>
+    </center>
+</main>
+
+<main class="container">
+    <center>
+        <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+        <div class="datecontent">
+            <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+            <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+            <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+        </div>
+        <div class="content">
+            <table>
+                <!-- Atencion antes de la asamblea -->
+                <tr>
+                    <th class="text-start">Equipos o servicios</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- atencion durante la asamblea -->
+                <tr>
+                    <th class="text-start">Equipos o servicios</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- atencion despues de la asamblea -->
+                <tr>
+                    <th class="text-start">Equipos o servicios</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                sapiente.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <p>Grupo Empresarial Nexos, su aliado estratégico, está en todo momento brindándole la mejor
+                atención con
+                los mejores
+                servicios tecnológicos. Puede comparar nuestros servicios en el siguiente enlace:
+                <a
+                    href="https://docs.google.com/spreadsheets/d/1QK2QBCKJf8b6IZzVxVge9Y6pYxi0Jx5H99kDZ-C2y6k/edit?usp=sharing">
+                    https://docs.google.com/spreadsheets/d/1QK2QBCKJf8b6IZzVxVge9Y6pYxi0Jx5H99kDZ-C2y6k/edit?usp=sharing
+                </a>
+                <br>
+                <b style="color: #ff5912;">Puede descargar el comparativo adjunto al correo y elegir la
+                    empresa más
+                    acertada.</b>
+            </p>
+
+            <h2>Apoyo y acompañamiento durante la planeación y ejecución de la asamblea:</h2>
+
+            <ol>
+                <li>Apoyo de ajustes técnicos para los integrantes del equipo directivo y/o
+                    administrativo (virtual).
+                </li>
+                <li>Envío de infografía para compartir con los propietarios, afiliados y/o asociados.
+                </li>
+                <li>Envío de video explicativo para ingresar a la plataforma de votación.</li>
+                <li>Envío de video explicativo del manejo de la plataforma.</li>
+                <li>Técnico de apoyo del equipo directivo para la transmisión de la asamblea y las
+                    votaciones (crea,
+                    dirige y guía
+                    las votaciones) - virtual.</li>
+                <li>Mesa de trabajo de técnicos para el apoyo de la asamblea, afiliados y/o asociados
+                    vía telefónica y
+                    WhatsApp
+                    virtual.</li>
+                <li>Software de manejo intuitivo.</li>
+                <li>Los asambleístas usarán una única plataforma para ver la transmisión de la asamblea,
+                    verificar
+                    quórum, votar e
+                    intervenir.</li>
+                <li>Los integrantes de la junta directiva y auditores de control deben reunirse en una
+                    sala virtual
+                    previamente para
+                    alistar la reunión, y en el momento que comience la asamblea, solo uno debe
+                    intervenir y
+                    posteriormente, de
+                    acuerdo con el desarrollo de la asamblea, los demás intervendrían.</li>
+            </ol>
+        </div>
+    </center>
+</main>
+
+<main class="container">
+    <center>
+        <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+        <div class="datecontent">
+            <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+            <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+            <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+        </div>
+        <div class="content">
+            <h3 class="text-start fw-bold">La transcripción que se lista en la propuesta se hará basada
+                en los
+                siguientes parámetros:</h3>
+
+            <ol>
+                <li><b>t.Express</b>: Tiempo de entrega de cinco días hábiles por las primeras dos horas
+                    de audio, más
+                    doce horas
+                    por
+                    cada hora de audio adicional.</li>
+                <li><b>T.Natural:</b> Se realiza un documento donde se omiten las muletillas e
+                    intervenciones de forma.
+                    Ideal para
+                    tener un documento bien redactado con los aportes importantes de la reunión.</li>
+                <li>Los días hábiles son de lunes a viernes.</li>
+                <li>La hora de audio cuenta una vez transcurridos quince minutos del audio o video.</li>
+            </ol>
+
+            <h3 class="text-start fw-bold">Tipo de transcripciones</h3>
+            <p>
+                A continuación, encontrará la clasificación de nuestro servicio de transcripciones.
+                Puede elegir
+                cualquier
+                combinación
+                entre el tiempo de entrega y el tipo de redacción de la transcripción que necesita.
+            </p>
+
+            <h3 class="text-start fw-bold">Por tiempo:</h3>
+
+            <ol>
+                <li><b>Normal</b>: Tiempo de entrega de ocho días hábiles por las primeras dos horas de
+                    audio, más doce
+                    horas por
+                    cada hora de audio adicional.</li>
+                <li><b>Express</b>: Tiempo de entrega de cinco días hábiles por las primeras dos horas
+                    de audio, más
+                    doce horas por
+                    cada hora de audio adicional.</li>
+                <li><b>Urgente</b>: Tiempo de entrega de tres días hábiles por las primeras dos horas de
+                    audio, más seis
+                    horas por
+                    cada hora de audio adicional.</li>
+            </ol>
+
+            <h3 class="text-start fw-bold">Por tipo de redacción de la transcripción:</h3>
+
+            <ol>
+                <li><b>Natural</b>: Se realiza un documento donde se omiten las muletillas e
+                    intervenciones de forma.
+                    Ideal para
+                    tener un documento bien redactado con aportes importantes de la reunión.</li>
+                <li><b>Literal</b>: Se realiza una transcripción con todas y cada una de las
+                    intervenciones que se
+                    realizan en el
+                    audio o video. No se omiten las muletillas ni cambian las palabras utilizadas por
+                    las personas que
+                    intervienen.
+                    Ideal para transcripciones de procesos judiciales.</li>
+                <li><b>Cronometrada</b>: Se realiza una transcripción identificando el tiempo donde se
+                    realiza la
+                    intervención, sin
+                    omitir ninguna intervención.</li>
+            </ol>
+
+            <h3 class="text-start fw-bold">Conexión a internet y asambleas semipresenciales o mixtas:
+            </h3>
+
+            <p>La calidad y continuidad de la conectividad e internet del contratante serán su
+                responsabilidad. En caso
+                de contratar
+                equipos para realización de asamblea mixta (presencia y virtual simultáneamente) se
+                deben garantizar el
+                espacio
+                físico adecuado y la conectividad a internet durante el tiempo que dure la asamblea, de
+                igual manera
+                deberá cumplir
+                con todos los protocolos de bioseguridad por el estado.</p>
+
+        </div>
+    </center>
+
+</main>
+
+<main class="container">
+    <center>
+        <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+        <div class="datecontent">
+            <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+            <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+            <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+        </div>
+        <div class="content">
+            <h3 class="text-start fw-bold">Notas:</h3>
+            <ol>
+                <li>
+                    La entrega del material, por ejemplo: audio, video, transcripción de audio y/o
+                    informes de
+                    votaciones, está
+                    sujeta a la cancelación total del servicio. Por lo menos el 50% de los servicios
+                    contratados han
+                    sido ejecutados
+                    al finalizar la asamblea, por ello solicitamos amablemente el 10% del valor del
+                    contrato para
+                    realizar la
+                    entrega de los entregables. Esta política ha sido implementada debido al alto nivel
+                    de cartera que
+                    hemos
+                    soportado en el último año. Nuestro deseo es servir y seguir siendo viables
+                    económicamente.
+                    Agradecemos su
+                    comprensión.
+                </li>
+                <li>
+                    El precio no incluye IVA (19%) en el servicio de votación integral o votación no
+                    presencial, son
+                    servicios
+                    exentos y, por lo tanto, no se debe sumar el IVA.
+                </li>
+                <li>
+                    Hora adicional: se refiere a cualquier función o hora completa adicional a las horas
+                    inicialmente
+                    contratadas.
+                </li>
+                <li>
+                    Si requiere un técnico en sitio o realizar una asamblea mixta, debe avisarnos con
+                    anticipación y
+                    garantizar el
+                    espacio físico adecuado y la conectividad a internet durante el tiempo que dure la
+                    asamblea.
+                </li>
+                <li>
+                    En caso de no haber quórum en la primera citación, se efectuará el cobro del 100% de
+                    los servicios
+                    contratados y
+                    se otorgará un descuento del 40% en la realización de la asamblea en la segunda
+                    convocatoria.
+                </li>
+            </ol>
+            <h3 class="text-start fw-bold">Condicones del servicio:</h3>
+            <ol>
+                <li>
+                    Para asegurar el correcto cumplimiento del servicio, es indispensable que obtengamos
+                    la citación a
+                    los
+                    copropietarios, afiliados y/o asociados.
+                </li>
+                <li>
+                    El valor dado para la realización del servicio virtual cubre hasta 2 horas, el valor
+                    de la hora
+                    adicional es del
+                    10% del valor contratado.
+                </li>
+                <li>
+                    El valor dado para los servicios como: transcripción, combo Asamblea, operador en
+                    sitio,
+                    transcripción,
+                    filmación para transmisión y otros cubre hasta 2 horas, el valor de la hora
+                    adicional es el previsto
+                    en el
+                    recuadro en la página 1.
+                </li>
+                <li>
+                    Las transcripciones se darán por aceptadas una vez transcurridos 15 días calendario
+                    después de su
+                    entrega. Si
+                    usted considera que su transcripción no tiene la calidad esperada, le invitamos
+                    amablemente a
+                    solicitar la
+                    corrección de la misma (su garantía), la cual será entregada en muy corto tiempo. Si
+                    usted decide
+                    corregir la
+                    transcripción por su cuenta, la compañía no se hará responsable por descuentos ni
+                    devoluciones.
+                </li>
+                <li>
+                    Los días hábiles son de lunes a viernes.
+                </li>
+                <li>
+                    La hora de audio cuenta una vez transcurridos quince minutos del audio o video.
+                </li>
+            </ol>
+
+
+        </div>
+    </center>
+
+</main>
+
+<main class="container">
+    <center>
+        <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/membrete.png" alt="Mi imagen">
+        <div class="datecontent">
+            <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+            <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+            <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+        </div>
+        <div class="content">
+            <h3 class="text-start fw-bold">Proceso de Asamblea no Presencial</h3>
+            <h3 class="text-start fw-bold">Preparación:</h3>
+            <ol>
+                <li>Contratación</li>
+                <li>Recepción de información de la organización (datos de la organización y listado de
+                    copropietarios,
+                    afiliados y/o
+                    asociados: unidades, coeficientes y correos electrónicos)</li>
+                <li>Creación de canal de comunicación vía streaming</li>
+                <li>Envío de correo a copropietarios, afiliados y/o asociados (informando usuario,
+                    contraseña, enlace de
+                    streaming,
+                    fechas y horas de citación)</li>
+                <li>Pre-registro (opcional)</li>
+            </ol>
+            <h3 class="text-start fw-bold">Ejecución:</h3>
+
+            <ol type="1">
+                <li>Preparación auditorio virtual de transmisión de video de junta directiva:
+                    <ol type="a">
+                        <li>Instalación de equipos y mobiliario para la reunión de junta directiva</li>
+                        <li>Instalación y preparación de equipos para la transmisión de audio y video
+                            vía streaming</li>
+                    </ol>
+                </li>
+                <li>Inicio del registro de asistentes (verificación de quórum)</li>
+                <li>Inicio de asamblea:
+                    <ol type="a">
+                        <li>Transmisión de audio y video (streaming)</li>
+                        <li>Recepción de mensajes en el chat</li>
+                        <li>Creación y realización de votaciones</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3 class="text-start fw-bold">Al finalizar la asamblea</h3>
+            <p>Entrega de informes, audio y videos de la asamblea</p>
+
+            <div class="text-start mt-5">
+                <img width="200" class="text-start" src="https://novakademia.s3.amazonaws.com/firma.png" alt="">
+            </div>
+            <h2 class="text-start fw-bold">CÉSAR W. VALENCIA JUNCO</h2>
+            <h3 class="text-start fw-bold">Gerente General</h3>
+
+
+        </div>
+    </center>
+</main>
+</body>
+
+</html>
