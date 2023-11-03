@@ -7,6 +7,7 @@ from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.views.generic import ListView
 from .models import Customer
+import os
 
 # Configurar pdfkit para usar wkhtmltopdf
 pdfkit_config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
@@ -15,22 +16,24 @@ def create_pdf(request):
     # Renderizar la plantilla HTML utilizando render_to_string de Django
     context = {}  # Reemplaza {} con los datos
     rendered_html = render_to_string('base.html', context)
+    _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), './templates/')
 
     options = {
         'dpi': '300',
-        'page-size': 'A4',
+        'page-size': 'A3',
         'encoding': "UTF-8",
         'margin-top': '0in',
         'margin-right': '0in',
-        'margin-bottom': '0in',
+        'margin-bottom': '1.5in',
         'margin-left': '0in',
         'enable-internal-links': '',    
         #'footer-center': '[page] of [topage]',
-        #'header-html': _path + '/web/templates/web/pdf/header.html',
         'page-offset': '-1',
         #'dump-outline': _path + '/web/templates/web/pdf/outline.xslt'
-        'header-spacing': '4',
-        'footer-spacing': '2'
+        'header-html': os.path.join(_path, 'footer-pdf.html'),
+        'footer-html': os.path.join(_path, 'footer-pdf.html'),
+        'header-spacing': '20',
+        'footer-spacing': '10'
     }
 
     css_file = 'static/styles/style.css'
