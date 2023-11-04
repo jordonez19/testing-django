@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporte PDF</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .content {
+            margin: auto;
+            width: 80%;
+        }
+
+        .datecontent {
+            top: 10%;
+            right: 23%;
+            width: 34%;
+        }
+
+        .img-membrete {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            border: 1px solid #000;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            background-color: #ff5912;
+            text-transform: uppercase;
+        }
+
+        td {
+            border: 1px solid #000;
+            color: #000;
+            padding: 0 5px;
+            text-align: start;
+            background-color: #fff;
+        }
+
+        li,
+        p {
+            margin: 2px 0;
+            text-align: start;
+        }
+
+        /* globals */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-start {
+            text-align: start;
+        }
+
+        .text-end {
+            text-align: end;
+        }
+
+        .bgprimary {
+            background-color: #ff5912;
+            color: #fff;
+        }
+
+        .bgsecondary {
+            background-color: #636363;
+            color: #fff;
+        }
+
+        .bgwhite {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .border-light {
+            border: 1px solid rgb(219, 218, 218);
+        }
+
+        .border-dark {
+            border: 1px solid #000;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .total-grid {
+            width: 100%;
+            margin: 0;
+        }
+
+        .total-grid td {
+            min-width: 150px;
+        }
+
+        .td__none {
+            border: none;
+        }
+
+        .m-0 {
+            margin: 0;
+        }
+
+        b {
+            font-weight: 900 !important;
+        }
+
+        .mt-5 {
+            margin-top: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <center>
+            <div class="image-page"></div>
+            <img class="img-membrete" src="https://novakademia.s3.amazonaws.com/body-pdf.png" alt="Mi imagen">
+            <!-- <div class="datecontent fw-bold">
+                <p class="m-0 text-end">Bogota, 3 de enero 2023</p>
+                <p class="m-0 text-center" style="margin-left: 60px">COTIZACION BFG453255</p>
+                <p class="m-0" style="margin-left: 30px">validez e la oferta: 30 dias calendario</p>
+            </div> -->
+            <div class="content">
+                <table>
+                    <tr>
+                        <th class="text-center">Equipos o servicios</th>
+                        <th>4 Horas</th>
+                        <th>Hora Adicional</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur sapiente.</li>
+                                <li>Lorem ipsum dolor sit adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                <li>Lorem ipsum amet consectetur ipsum amet consectetur adipisicing elit. Dolor,
+                                    sapiente.
+                                    (var code)
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="text-center">$14.300</td>
+                        <td class="text-center">10%</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                            </ul>
+                        </td>
+                        <td>$390.000</td>
+                        <td>$390.000</td>
+                    </tr>
+                </table>
+                <br>
+                <table class="total-grid">
+                    <tr>
+                        <td class="td__none"></td>
+                        <td class="bgprimary border-light text-end fw-bold">SUBTOTAL</td>
+                        <td class="td__none bgsecondary text-center fw-bold">$500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="td__none"></td>
+                        <td class="bgprimary border-light text-end fw-bold">DESCUENTO ESPECIAL</td>
+                        <td class="td__none bgsecondary text-center fw-bold">$500.000</td>
+                    </tr>
+                    <tr>
+                        <td class="td__none"></td>
+                        <td class="bgprimary border-light text-end fw-bold">TOTAL</td>
+                        <td class="td__none bgsecondary text-center fw-bold">$1.000.000</td>
+                    </tr>
+                </table><br><br>
+                <ul>
+                    <li>Puede elegir uno o más servicios de la tabla; los servicios o equipos se encuentran
+                        discriminados en
+                        ítems separados.</li>
+                    <li>Si usted está interesado(a) en reducir los tiempos de entrega y/o cambiar el tipo de redacción
+                        de la
+                        transcripción, comuníquese con uno de nuestros asesores para actualizar su propuesta.</li>
+                    <li>Observación de servicios: si contrata servicios como transcripción u operador de apoyo en
+                        comunicación, se aplica el IVA del 19% por no estar contemplado como servicio CLOUD. Este
+                        servicio
+                        se incluirá con dicho impuesto dentro de la facturación.</li>
+                </ul>
+                <p>
+                    <b>Forma de pago</b>: cincuenta por ciento (50%) a la firma del contrato o correo electrónico de
+                    confirmación de evento, cincuenta por ciento (50%) a la entrega de la factura con la discriminación
+                    del
+                    pago correspondiente.
+                </p>
+                <table>
+                    <table>
+                        <tr>
+                            <th class="text-center">Servicios Adicionales</th>
+                            <th style="border-right:transparent"></th>
+                            <th style="border-left:transparent">Hora Adicional</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                </ul>
+                            </td>
+                            <td>$390.000</td>
+                            <td>$390.000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                </ul>
+                            </td>
+                            <td>$390.000</td>
+                            <td>$390.000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                </ul>
+                            </td>
+                            <td>$390.000</td>
+                            <td>$390.000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                </ul>
+                            </td>
+                            <td>$390.000</td>
+                            <td>$390.000</td>
+                        </tr>
+                       
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, sapiente.</li>
+                                </ul>
+                            </td>
+                            <td>$390.000</td>
+                            <td>$390.000</td>
+                        </tr>
+                    </table>
+
+                    <li>El servicio de pre-asamblea virtual no incluye servicios físicos ni transcripción, solo es un
+                        servicio en la nube exento
+                        de IVA.
+                    </li>
+            </div>
+        </center>
+    </main>
+</body>
+
+</html>

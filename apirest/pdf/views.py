@@ -15,7 +15,7 @@ pdfkit_config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/b
 def create_pdf(request):
     # Renderizar la plantilla HTML utilizando render_to_string de Django
     context = {}  # Reemplaza {} con los datos
-    rendered_html = render_to_string('base.html', context)
+    rendered_html = render_to_string('test.html', context)
     _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), './templates/')
 
     options = {
@@ -30,10 +30,10 @@ def create_pdf(request):
         #'footer-center': '[page] of [topage]',
         'page-offset': '-1',
         #'dump-outline': _path + '/web/templates/web/pdf/outline.xslt'
-        'header-html': os.path.join(_path, 'footer-pdf.html'),
+        'header-html': os.path.join(_path, 'header-pdf.html'),
         'footer-html': os.path.join(_path, 'footer-pdf.html'),
-        'header-spacing': '20',
-        'footer-spacing': '10'
+        'header-spacing': '-50',
+        'footer-spacing': '0'
     }
 
     css_file = 'static/styles/style.css'
@@ -47,12 +47,19 @@ def create_pdf(request):
 
     return response
 
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------
+
 def image(request):
     return render(request, 'report-pdf.html')
     
-#----------------------------------------------------------------------------
-
-#----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 class CustomerListView(ListView):
     model = Customer

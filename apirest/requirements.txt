@@ -8,7 +8,6 @@ django-cors-headers==4.3.0
 djangorestframework==3.14.0
 filelock==3.13.0
 jmespath==1.0.1
-mysqlclient==2.2.0
 netifaces==0.11.0
 platformdirs==3.11.0
 python-dateutil==2.8.2
@@ -20,5 +19,6 @@ typing_extensions==4.8.0
 tzdata==2023.3
 urllib3==1.26.18
 virtualenv==20.24.6
-Jinja2 
+Jinja2
 pdfkit
+xhtml2pdf
