@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.template.loader import render_to_string
 import pdfkit
+from django.template.loader import render_to_string
+
 from django.shortcuts import render, get_object_or_404
 import os
 from django.template.loader import get_template
@@ -15,7 +16,7 @@ pdfkit_config = pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/b
 def create_pdf(request):
     # Renderizar la plantilla HTML utilizando render_to_string de Django
     context = {}  # Reemplaza {} con los datos
-    rendered_html = render_to_string('test.html', context)
+    rendered_html = render_to_string('notas.html', context)
     _path = os.path.join(os.path.dirname(os.path.abspath(__file__)), './templates/')
 
     options = {
@@ -32,7 +33,7 @@ def create_pdf(request):
         #'dump-outline': _path + '/web/templates/web/pdf/outline.xslt'
         'header-html': os.path.join(_path, 'header-pdf.html'),
         'footer-html': os.path.join(_path, 'footer-pdf.html'),
-        'header-spacing': '-50',
+        'header-spacing': '0',
         'footer-spacing': '0'
     }
 
@@ -43,16 +44,9 @@ def create_pdf(request):
 
     # Crear una respuesta de Django con el PDF
     response = HttpResponse(pdf, content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="cotizacion_report.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="cotizacion_report.pdf"' 
 
     return response
-
-
-
-
-
-
-
 
 
 #----------------------------------------------------------------------------
@@ -60,6 +54,8 @@ def create_pdf(request):
 def image(request):
     return render(request, 'report-pdf.html')
     
+
+#----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 class CustomerListView(ListView):
     model = Customer
